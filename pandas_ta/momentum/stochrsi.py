@@ -50,7 +50,7 @@ def stochrsi(close, length=None, rsi_length=None, k=None, d=None, mamode=None, o
     stochrsi_k.category = stochrsi_d.category = "momentum"
 
     # Prepare DataFrame to return
-    data = {stochrsi_k.name: stochrsi_k, stochrsi_d.name: stochrsi_d}
+    data = {'rsi': stoch, 'k': stochrsi_k, 'd': stochrsi_d}
     df = DataFrame(data)
     df.name = f"{_name}{_props}"
     df.category = stochrsi_k.category
